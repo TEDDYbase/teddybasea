@@ -3,91 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teddy's 3D Art Portfolio</title>
+    <title>Teddy's Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
+            background-color: #121212;
+            color: #ffffff;
         }
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
+            background-color: #1e1e1e;
+            padding: 20px;
             text-align: center;
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
         }
-        main {
-            padding: 20px;
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
         }
-        section {
-            margin-bottom: 40px;
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .container {
+            padding: 20px;
+            transition: all 0.5s ease-in-out;
+        }
+        .container:hover {
+            background-color: #333333;
+        }
+        .portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
         .portfolio-item {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin-bottom: 20px;
+            width: 30%;
+            margin: 20px 0;
+            background-color: #444444;
+            padding: 10px;
+            transition: transform 0.3s;
         }
         .portfolio-item img {
-            max-width: 100%;
-            border-radius: 10px;
+            width: 100%;
+            height: auto;
         }
-        .portfolio-item h2 {
-            margin-top: 0;
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+        .portfolio-item h3 {
+            text-align: center;
+        }
+        .portfolio-item p {
+            text-align: center;
+        }
+        .contact {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .contact a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
         }
         footer {
-            background-color: #333;
-            color: #fff;
+            background-color: #1e1e1e;
             text-align: center;
-            padding: 20px 0;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
-        .social-links a {
-            color: #fff;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        .social-links a:hover {
-            text-decoration: underline;
+        footer p {
+            margin: 0;
         }
     </style>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'YOUR_MEASUREMENT_ID');
+    </script>
 </head>
 <body>
     <header>
-        <h1>Teddy's 3D Art Portfolio</h1>
+        <h1>Teddy's Portfolio</h1>
+        <nav>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Hi, I'm Teddy, a 20-year-old university student and aspiring 3D artist. I'm passionate about creating stunning 3D models and animations. Here, you'll find some of my best work. Feel free to reach out to me on Instagram or Telegram.</p>
-        </section>
-        <section>
-            <h2>Portfolio</h2>
+    <div class="container" id="portfolio">
+        <h2>My Blender Projects</h2>
+        <div class="portfolio">
             <div class="portfolio-item">
-                <h2>Project 1: 3D Model of a Fantasy Sword</h2>
-                <img src="images/image1.jpg" alt="3D Model of a Fantasy Sword">
-                <p>This project showcases my skills in modeling, texturing, and rendering a high-quality fantasy sword.</p>
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Post-production details and description</p>
             </div>
             <div class="portfolio-item">
-                <h2>Project 2: Realistic Character Animation</h2>
-                <img src="images/image2.jpg" alt="Realistic Character Animation">
-                <p>This animation project demonstrates my ability to create lifelike character movements and expressions.</p>
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Post-production details and description</p>
             </div>
-            <!-- Add more projects as needed -->
-        </section>
-    </main>
-    <footer>
-        <p>Connect with me on social media:</p>
-        <div class="social-links">
-            <a href="https://www.instagram.com/blender_teddy/" target="_blank">Instagram</a>
-            <a href="https://t.me/BLENDER_ETHIOPIA" target="_blank">Telegram</a>
+            <div class="portfolio-item">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>Post-production details and description</p>
+            </div>
         </div>
+    </div>
+    <div class="container contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:teddy@example.com">teddy@example.com</a></p>
+        <p>Telegram: <a href="https://t.me/your_telegram_handle">@your_telegram_handle</a></p>
+        <p>Instagram: <a href="https://instagram.com/your_instagram_handle">@your_instagram_handle</a></p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Teddy. All rights reserved.</p>
     </footer>
 </body>
 </html>
